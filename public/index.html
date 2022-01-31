@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Raleway:wght@200&family=Roboto&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body onload="loaderF()">
+    <div class="loader"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>
+    <div class="orange-back hide">
+        <div class="title">Chose date and press button</div>
+        <div class="chosen-date"></div>
+        <div class="data-container">
+            <div class="ymd">
+                Days: 0
+            </div>
+            <div class="hour">00:00:00</div>
+        </div>
+        <form class='form' action="data-chosen" onsubmit="return false;">
+            <label for="input-year">Y:</label>
+            <input type="number" id='input-year' value=2022 step=1 min=2022 max=2100>
+            <label for="input-month">M:</label>
+            <input type="number" id='input-month' value=1 step=1 min=1 max=12 size=2>
+            <label for="input-day">D:</label>
+            <input type="number" id='input-day' value=1 step=1 min=1 max=31 size=2>
+            <label for="input-hour">h:</label>
+            <input type="number" id='input-hour' value=0 step=1 min=0 max=23 size=2>
+            <label for="input-minute">m:</label>
+            <input type="number" id='input-minute' value=0 step=1 min=0 max=59 size=2>
+            <label for="input-second">s:</label>
+            <input type="number" id='input-second' value=0 step=1 min=0 max=59 size=2>
+            <div class="date-choice">
+                <button type="submit" class="confirm" onclick="chosenDate()">Confirm</button>
+                <button class="reset hide" onclick="location.reload(); return false;">Reset</button>
+            </div>
+            
+        </form>
+    </div>  
+</body>
+</html>
